@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="anchor_Pane_background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jfxbase.oopjfxbase.controllers.AccountPage">
+    <children>
+        <Pane layoutX="570.0" prefHeight="62.0" prefWidth="225.0" styleClass="date-pane">
+            <children>
+                <Label layoutX="54.0" layoutY="8.0" prefHeight="46.0" prefWidth="135.0" text="Account" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="31.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Label fx:id="accountLabel" layoutX="250.0" layoutY="54.0" prefHeight="74.0" prefWidth="319.0" styleClass="workout-name" text="Account" textAlignment="CENTER">
+            <font>
+                <Font size="45.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="39.0" layoutY="634.0" prefHeight="74.0" prefWidth="715.0" styleClass="menu-bar">
+            <children>
+                <Button layoutX="446.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="42.0" prefWidth="99.0" styleClass="menu-button" text="Logout">
+                    <font>
+                        <Font name="Cascadia Mono Regular" size="16.0" />
+                    </font></Button>
+                <Button layoutX="308.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="42.0" prefWidth="99.0" styleClass="menu-button" text="Home">
+                    <font>
+                        <Font name="Cascadia Mono Regular" size="16.0" />
+                    </font></Button>
+                <Button fx:id="account" layoutX="164.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToAccount" prefHeight="42.0" prefWidth="99.0" styleClass="menu-button" text="Account">
+                    <font>
+                        <Font name="Cascadia Mono Regular" size="16.0" />
+                    </font></Button>
+            </children>
+        </AnchorPane>
+      <VBox fx:id="vboxExercises" layoutX="155.0" layoutY="217.0" prefHeight="136.0" prefWidth="408.0" spacing="10" />
+      <ComboBox fx:id="comboBoxWorkout" layoutX="56.0" layoutY="138.0" prefHeight="36.0" prefWidth="169.0" promptText="Select Workout" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="anchor_Pane_background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jfxbase.oopjfxbase.controllers.InsertWorkout">
+   <children>
+      <ComboBox fx:id="comboBoxNrExercises" layoutX="63.0" layoutY="143.0" prefHeight="30.0" prefWidth="212.0" promptText="Number of Exercises">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <VBox fx:id="vboxExercises" layoutX="169.0" layoutY="191.0" prefHeight="199.0" prefWidth="455.0" spacing="10" />
+      <Button fx:id="save" layoutX="634.0" layoutY="554.0" mnemonicParsing="false" onAction="#SaveWorkoutInDB" prefHeight="42.0" prefWidth="146.0" text="Save">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Pane fx:id="paneWorkout" layoutX="291.0" layoutY="62.0" prefHeight="74.0" prefWidth="212.0">
+         <children>
+            <ComboBox fx:id="comboBoxWorkout" layoutX="19.0" layoutY="11.0" prefHeight="52.0" prefWidth="175.0" promptText="Select Workout">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color red="0.6842105388641357" green="0.13430799543857574" blue="0.13430799543857574" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </ComboBox>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="39.0" layoutY="634.0" prefHeight="74.0" prefWidth="715.0" styleClass="menu-bar">
+         <children>
+            <Button layoutX="446.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="42.0" prefWidth="99.0" styleClass="menu-button" text="Logout">
+               <font>
+                  <Font name="Cascadia Mono Regular" size="16.0" />
+               </font></Button>
+            <Button layoutX="308.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="42.0" prefWidth="99.0" styleClass="menu-button" text="Home">
+               <font>
+                  <Font name="Cascadia Mono Regular" size="16.0" />
+               </font></Button>
+            <Button layoutX="164.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToAccount" prefHeight="42.0" prefWidth="99.0" styleClass="menu-button" text="Account">
+               <font>
+                  <Font name="Cascadia Mono Regular" size="16.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="533.0" prefHeight="62.0" prefWidth="261.0" styleClass="date-pane">
+         <children>
+            <Label fx:id="dateLabel" layoutX="55.0" layoutY="8.0" prefHeight="22.0" prefWidth="38.0" text="Day" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="monthLabel" layoutX="104.0" layoutY="8.0" prefHeight="46.0" prefWidth="158.0" text="Month" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

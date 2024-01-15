@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="545.0" prefWidth="681.0" styleClass="anchor_Pane_background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jfxbase.oopjfxbase.controllers.CalendarView">
+    <children>
+        <Pane layoutX="570.0" prefHeight="62.0" prefWidth="225.0" styleClass="date-pane">
+            <children>
+                <Label layoutX="72.0" layoutY="8.0" prefHeight="46.0" prefWidth="99.0" text="Home" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="31.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <!-- Month Navigation Section -->
+        <HBox alignment="CENTER" layoutX="235.0" layoutY="46.0" prefHeight="72.0" prefWidth="323.0" spacing="10">
+            <Button onAction="#prevMonth" prefHeight="26.0" prefWidth="46.0" styleClass="button-arrow" text="&lt;" />
+            <Label fx:id="monthLabel" prefHeight="22.0" prefWidth="94.0" text="Month" textFill="WHITE">
+            <font>
+               <Font name="Cascadia Mono Regular" size="20.0" />
+            </font></Label>
+            <Label fx:id="yearLabel" prefHeight="18.0" prefWidth="51.0" text="Year" textFill="WHITE">
+            <font>
+               <Font name="Cascadia Mono Regular" size="20.0" />
+            </font></Label>
+            <Button onAction="#nextMonth" prefHeight="26.0" prefWidth="49.0" styleClass="button-arrow" text="&gt;" />
+        </HBox>
+
+        <!-- Calendar AnchorPane -->
+        <AnchorPane layoutX="-44.0" layoutY="89.0" prefHeight="450.0" prefWidth="839.0">
+            <children>
+                <!-- Existing Calendar Grid -->
+                <GridPane fx:id="calendarGrid" layoutX="44.0" layoutY="53.0" prefHeight="430.0" prefWidth="795.0">
+                    <!-- Column Constraints -->
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <!-- Row Constraints -->
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <StackPane style="-fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" styleClass="day-header" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fri" textAlignment="CENTER" wrappingWidth="86.13672065734863" />
+                        </StackPane>
+                        <StackPane style="-fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" styleClass="day-header" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sat" textAlignment="CENTER" wrappingWidth="86.13672065734863" />
+                        </StackPane>
+                        <StackPane style="-fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" styleClass="day-header" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thu" textAlignment="CENTER" wrappingWidth="86.13672065734863" />
+                        </StackPane>
+                        <StackPane style="-fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" styleClass="day-header" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mon" textAlignment="CENTER" wrappingWidth="86.13672065734863" />
+                        </StackPane>
+                        <StackPane style="-fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" styleClass="day-header" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wed" textAlignment="CENTER" wrappingWidth="86.13672065734863" />
+
+                        </StackPane>
+                        <StackPane style="-fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" styleClass="day-header" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tue" textAlignment="CENTER" wrappingWidth="86.13672065734863" />
+                        </StackPane>
+                        <StackPane style="-fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" styleClass="day-header" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                            <Text fill="#ff459c" strokeType="OUTSIDE" strokeWidth="0.0" text="Sun" textAlignment="CENTER" wrappingWidth="86.13672065734863" />
+                        </StackPane>
+                    </children>
+                </GridPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="39.0" layoutY="634.0" prefHeight="74.0" prefWidth="715.0" styleClass="menu-bar">
+            <children>
+                <Button layoutX="446.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="42.0" prefWidth="99.0" styleClass="menu-button" text="Logout">
+                    <font>
+                        <Font name="Cascadia Mono Regular" size="16.0" />
+                    </font></Button>
+                <Button layoutX="308.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="42.0" prefWidth="99.0" styleClass="menu-button" text="Home">
+                    <font>
+                        <Font name="Cascadia Mono Regular" size="16.0" />
+                    </font></Button>
+                <Button layoutX="164.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToAccount" prefHeight="42.0" prefWidth="99.0" styleClass="menu-button" text="Account">
+                    <font>
+                        <Font name="Cascadia Mono Regular" size="16.0" />
+                    </font></Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

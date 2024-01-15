@@ -1,0 +1,324 @@
+.calendar-cell {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-background-radius: 3,2,1;
+}
+
+/* Style for the current day */
+.calendar-cell.current-day {
+    -fx-background-color: #F3E5F5; /* Light purple background for current day */
+}
+
+/* Hover effect for calendar cells */
+.calendar-cell:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-border-color: purple;
+    -fx-border-width: 2px;
+}
+
+/* Style for the day headers (Sun, Mon, etc.) */
+.day-header {
+    -fx-background-color: #E1BEE7; /* Light purple header */
+    -fx-text-fill: #4A148C; /* Dark purple text */
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+
+/* Style for the month navigation header */
+.month-navigation {
+    -fx-background-color: #AB47BC; /* Darker purple background */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button-arrow {
+    -fx-background-color: #7B1FA2; /* Your desired purple color */
+    -fx-background-radius: 50%;
+    -fx-min-width: 25px;
+    -fx-min-height: 25px;
+    -fx-max-width: 25px;
+    -fx-max-height: 25px;
+    -fx-background-insets: 0;
+    -fx-padding: 10px; /* Adjust padding to center the text/arrow icon */
+    -fx-font-family: "Arial"; /* Choose your font-family if using text */
+    -fx-font-size: 24px; /* Adjust the font size as needed */
+    -fx-text-fill: #FFFFFF; /* White text for the arrow */
+    -fx-alignment: center; /* Align the graphic (if any) and text to the center */
+    -fx-cursor: hand; /* Changes cursor to a hand when hovering over the button */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 5, 0, 0, 0); /* Optional: adds a subtle shadow effect */
+    -fx-transition: all 0.3s ease; /* Smooth transition for the hover effect */
+}
+.button-arrow:hover {
+    -fx-background-color: #9C27B0; /* A slightly lighter purple for the hover effect */
+    -fx-scale-x: 0.95; /* Scales the button down to 95% of its size on the X-axis */
+    -fx-scale-y: 0.95; /* Scales the button down to 95% of its size on the Y-axis */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 3, 0, 0, 0); /* Optional: Adjusts the shadow effect */
+}
+
+/* Text styling for dates */
+.date-text {
+    -fx-fill: #4A148C; /* Dark purple text color for the day numbers */
+    -fx-font-size: 17px;
+}
+
+/* Style for non-current month days */
+.calendar-cell.other-month-day .date-text {
+    -fx-fill: #BDBDBD; /* Grey text for other month days */
+}
+
+/* Styling the StackPane that contains the date text */
+.stack-date {
+    -fx-padding: 5px; /* Padding around the date text */
+}
+
+
+.calendar-cell.workout-cell {
+    -fx-background-color: #BA68C8; /* Your chosen color */
+    /* Add other styling as needed, for example: */
+    -fx-padding: 5px;
+    -fx-background-radius: 5px;
+}
+
+.workout-cell > .label {
+    -fx-text-fill: white; /* Ensures the text is white */
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    /* Add other label-specific styling here */
+}
+
+
+
+
+.roundedPane{
+    -fx-background-radius: 4, 3, 2;
+    -fx-alignment: center center;
+/*    -fx-padding: 500; !* Adjust as needed *!*/
+
+}
+
+.backgroundColor{
+    -fx-background-color: linear-gradient(to right, #61D8DE, #E839F6);
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 3, 2, 1;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 10,0,0,1 );
+    -fx-text-fill: white;
+}
+.backgroundColorButton {
+    -fx-background-color: linear-gradient(to right, #61D8DE, #E839F6);
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 3, 2, 1;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 10,0,0,1 );
+    -fx-text-fill: white;
+}
+.backgroundColorButton:hover {
+    -fx-background-color: linear-gradient(to right, #91D8DE, #E859F6);
+    -fx-cursor: hand;
+}
+
+.transparentBackground {
+    -fx-background-color: rgba(211, 211, 211, 0); /* Use your desired RGB values and adjust the alpha (transparency) as needed */
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 3, 2, 1;
+    -fx-text-fill: #0a82b1;
+}
+
+.transparentBackground:hover {
+    -fx-background-color: rgba(255, 255, 255); /* Adjust hover color as needed */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 10, 0, 0, 3);
+    -fx-text-fill: #075BB2;
+    -fx-cursor: hand;
+}
+.user-icon {
+    -fx-background-image: url('1077114.png');
+    -fx-background-size: contain; /* or cover, depending on your preference */
+    -fx-background-repeat: no-repeat;
+    -fx-min-width: 70px; /* Adjust the width and height as needed */
+    -fx-min-height: 24px;
+}
+.pass {
+    -fx-background-image: url('pass.png');
+    -fx-background-size: contain; /* or cover, depending on your preference */
+    -fx-background-repeat: no-repeat;
+    -fx-min-width: 70px; /* Adjust the width and height as needed */
+    -fx-min-height: 24px;
+}
+
+.checkpass {
+    -fx-background-image: url('download.png');
+    -fx-background-size: contain; /* or cover, depending on your preference */
+    -fx-background-repeat: no-repeat;
+    -fx-min-width: 70px; /* Adjust the width and height as needed */
+    -fx-min-height: 24px;
+}
+
+.resetpass {
+    -fx-background-image: url('reset_password_icon.png');
+    -fx-background-size: contain; /* or cover, depending on your preference */
+    -fx-background-repeat: no-repeat;
+    -fx-min-width: 80px; /* Adjust the width and height as needed */
+    -fx-min-height: 80px;
+}
+
+.email {
+    -fx-background-image: url('email.png');
+    -fx-background-size: contain; /* or cover, depending on your preference */
+    -fx-background-repeat: no-repeat;
+    -fx-min-width: 70px; /* Adjust the width and height as needed */
+    -fx-min-height: 30px;
+}
+
+.back {
+    -fx-background-image: url('Back.png');
+    -fx-background-size: contain; /* or cover, depending on your preference */
+    -fx-background-repeat: no-repeat;
+    -fx-min-width: 30px; /* Adjust the width and height as needed */
+    -fx-min-height: 5px;
+}
+
+.back:hover{
+    -fx-cursor: hand;
+}
+
+.backtologin {
+    -fx-background-color: rgba(211, 211, 211, 0); /* Use your desired RGB values and adjust the alpha (transparency) as needed */
+}
+
+.backtologin:hover {
+    -fx-cursor: hand;
+}
+
+
+.menu-bar {
+    -fx-background-color: #9C27B0; /* Purple background */
+    -fx-background-radius:8 7 6;
+    -fx-font-weight: bold;
+}
+
+.menu-button {
+    -fx-background-color: transparent; /* Transparent background */
+    -fx-text-fill: white; /* White text */
+    -fx-graphic-text-gap: 10px; /* Gap between icon and text */
+}
+
+.menu-button .label {
+    -fx-text-fill: white; /* White text for the button's label */
+}
+
+.menu-button:hover {
+    -fx-background-color: #AB47BC; /* Slightly lighter purple for hover effect */
+    -fx-cursor: hand;
+}
+
+.menu-button:pressed {
+    -fx-background-color: #7B1FA2; /* Slightly darker purple for pressed effect */
+}
+
+.menu-button .graphic { /* Assuming you are using graphics for the icons */
+    -fx-fill: white; /* White color for SVGPath or similar */
+}
+
+.anchor_Pane_background{
+    -fx-background-color: #bda5d0;
+}
+
+
+
+.form-pane {
+    -fx-background-color: #F3E5F5; /* Light purple background for the form pane */
+    -fx-padding: 20px; /* Padding inside the form pane */
+    -fx-background-radius: 4, 3, 2;
+}
+
+/* Style for the ComboBoxes */
+.combo-box {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-text-alignment: center;
+    -fx-font-size: 15px;
+    -fx-border-color: #9C27B0; /* Purple border to match the theme */
+    -fx-border-width: 2px; /* Border thickness */
+    -fx-background-radius: 4,3,2;
+    -fx-border-radius: 4, 3, 2;
+
+}
+.combo-box:hover{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-cursor: hand;
+}
+
+/* Style for the TextFields */
+.text-field1 {
+    -fx-background-color: white;
+    -fx-border-color: #9C27B0; /* Purple border to match the theme */
+    -fx-border-width: 2px; /* Border thickness */
+    -fx-border-radius: 5,4,3;
+    -fx-max-width: 80px;
+
+}
+
+/* Style for Labels */
+.label-workout {
+    -fx-text-fill: #9C27B0; /* Purple text to match the theme */
+    -fx-font-weight: bold; /* Make the label text bold */
+    -fx-font-size: 22px;
+}
+
+/* Style for Save Button */
+.save-button {
+    -fx-background-color: #bd1cd5; /* Purple background to match the theme */
+    -fx-text-fill: white; /* White text for the button */
+    -fx-font-weight: bold; /* Make the button text bold */
+    -fx-background-radius: 5, 4, 3;
+
+}
+
+.save-button:hover {
+    -fx-background-color: #de78ef; /* Slightly lighter purple for hover effect */
+}
+
+.save-button:pressed {
+    -fx-background-color: #7B1FA2; /* Slightly darker purple for pressed effect */
+}
+
+.date-pane {
+    -fx-background-color: linear-gradient(to right, #d279e5, #d52dec);
+    -fx-text-fill: white;
+    -fx-padding: 5px 10px;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+}
+
+.workout-name{
+    -fx-font-size: 50px;
+    -fx-font-weight: bold;
+    -fx-text-fill:linear-gradient(to right, #b847ea, #962cc2) ;
+}
+.label-sets-reps-kg{
+    -fx-font-size: 20px;
+    -fx-text-fill: #9d4ec0;
+}
+
+
+.button-exercises{
+    -fx-font-size: 20px;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: #9C27B0;
+    -fx-border-width: 3px;
+    -fx-border-radius: 4,3,2;
+}
+
+.button-exercises:hover{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-border-color: purple;
+    -fx-border-width: 4px;
+    -fx-cursor: hand;
+}
+
+.label-PR{
+    -fx-font-size: 35px;
+    -fx-text-fill: #9d4ec0;
+}

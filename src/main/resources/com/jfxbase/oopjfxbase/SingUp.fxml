@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="700.0" styleClass="backgroundColor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jfxbase.oopjfxbase.controllers.SingUpController">
+    <children>
+        <Pane layoutX="214.0" layoutY="59.0" prefHeight="416.0" prefWidth="272.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="265.0" AnchorPane.topAnchor="150.0">
+            <children>
+                <Label layoutX="33.0" layoutY="122.0" minHeight="18.0" minWidth="12.0" prefHeight="25.0" prefWidth="12.0" styleClass="user-icon" stylesheets="@style.css" />
+                <Label layoutX="33.0" layoutY="165.0" minHeight="14.0" minWidth="5.0" prefHeight="24.0" prefWidth="5.0" styleClass="pass" stylesheets="@style.css" />
+                <Label layoutX="33.0" layoutY="209.0" minHeight="14.0" minWidth="5.0" prefHeight="24.0" prefWidth="5.0" styleClass="checkpass" stylesheets="@style.css" />
+                <Button id="Login" layoutX="24.0" layoutY="276.0" mnemonicParsing="false" onAction="#getData" prefHeight="28.0" prefWidth="224.0" styleClass="backgroundColorButton" text="Sing Up" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+                <TextField fx:id="name" layoutX="62.0" layoutY="122.0" prefHeight="25.0" prefWidth="161.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;" />
+                <PasswordField fx:id="pass" layoutX="63.0" layoutY="164.0" prefWidth="161.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;" />
+                <Text fill="#302b2b" layoutX="94.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sing Up">
+                    <font>
+                        <Font name="Arial Bold" size="22.0" />
+                    </font></Text>
+                <Text layoutX="57.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already a member ?" />
+                <Button layoutX="163.0" layoutY="346.0" mnemonicParsing="false" onAction="#onGoToAnotherSceneClick" prefHeight="30.0" prefWidth="53.0" styleClass="transparentBackground" text="Login" textFill="#1bd0f4">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
+            <PasswordField fx:id="checkpass" layoutX="62.0" layoutY="208.0" prefHeight="25.0" prefWidth="161.0" promptText="Confirm Password" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;" />
+            </children></Pane>
+    </children>
+</AnchorPane>
