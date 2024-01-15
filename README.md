@@ -38,4 +38,4 @@ The Gym App is tailored for individuals who frequent the gym and wish to monitor
 
 ## Class Diagram
 The following diagram shows the structure of the Gym App and the relation between each class.
-![Gym App Screenshot](images/Diagram.png)
+![Gym App Screenshot](Images/Diagram.png)
