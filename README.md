@@ -59,7 +59,10 @@ Below is a diagram of how the tables are structured and connected:
 ![Home](Images/DatabaseDiagram.png)
 
 ## Important mentions
--For sending the password via email i've used a thid-party SMTP server by GMAIL. This requires proper internet connection. It may have a delay until you receive the email with the password and if you don't receive it, you need to check you spam inbox as well.
+-For sending the password via email i've used a thid-party SMTP server by GMAIL. This requires proper internet connection. It may have a delay until you receive the email with the password and if you don't receive it, you need to check your spam inbox as well.
+
+## Conclusion
+The Gym App is a comprehensive solution for gym enthusiasts to track and manage their workout routines efficiently, having a simple and user-friendly interface. Various functionalities can be added in the future, making the app a good contender in the marketplace.
 
 
 
