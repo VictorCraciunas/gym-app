@@ -39,3 +39,27 @@ The Gym App is tailored for individuals who frequent the gym and wish to monitor
 ## Class Diagram
 The following diagram shows the structure of the Gym App and the relation between each class.
 ![Gym App Screenshot](Images/Diagram.png)
+
+## Screensohts
+Here are some screenshots with the app.
+![Home](Images/HomePage.png)
+This is the Home-Page where the user sees when he had an workout and also he can add another one.
+![Home](Images/InsertWorkout.png)
+Here, if the user had a workout, he can see what he had and if didn't have any, he can insert another one.
+![Home](Images/Account.png)
+And finally this is the account page where the user can see his personal records.
+
+## Database
+
+The Gym App utilizes a local PostgreSQL server as its database solution. This database is structured into four main tables: `users`, `typeofworkout`, `exercises`, and `userworkout`. These tables are intricately linked to each other, allowing for efficient storage and retrieval of data related to user activities, workout types, specific exercises, and user workout records. This relational database design ensures that all necessary data is stored in an organized and accessible manner.
+
+To facilitate the connection between the Java application and the PostgreSQL database, a specific JDBC (Java Database Connectivity) library was employed. This library provides the necessary tools to establish a connection to the database, execute queries, and handle the data within the Java application.
+
+Below is a diagram of how the tables are structured and connected: 
+![Home](Images/DatabaseDiagram.png)
+
+## Important mentions
+-For sending the password via email i've used a thid-party SMTP server by GMAIL. This requires proper internet connection. It may have a delay until you receive the email with the password and if you don't receive it, you need to check you spam inbox as well.
+
+
+
