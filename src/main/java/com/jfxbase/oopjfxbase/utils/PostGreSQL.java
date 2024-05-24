@@ -15,7 +15,7 @@ public class PostGreSQL {
         /// information required to access the database
         String DB_URL = "jdbc:postgresql://localhost:5432/javafx";
         String DB_USER = "postgres";
-        String DB_PASSWORD = "1k2k3k4k";
+        String DB_PASSWORD = "";
 
 
         //queries that we need to implement

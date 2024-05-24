@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="anchor_Pane_background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jfxbase.oopjfxbase.controllers.AccountPage">
     <children>
-        <Pane layoutX="570.0" prefHeight="62.0" prefWidth="225.0" styleClass="date-pane">
+        <Pane layoutX="570.0" prefHeight="62.0"  prefWidth="225.0" styleClass="date-pane">
             <children>
                 <Label layoutX="54.0" layoutY="8.0" prefHeight="46.0" prefWidth="135.0" text="Account" textFill="WHITE">
                     <font>
