@@ -9,7 +9,7 @@ public class EmailSender {
 
     public static void sendEmail( String givenEmail, String passwordFromDataBase) {
         String senderEmail = "victor.craciunas02@gmail.com"; // gmail mandatory
-        String senderPassword = "axgn uqfn wfdo nxxh"; // password created with apps password from google (two factor authentication required)
+        String senderPassword = ""; // password created with apps password from google (two factor authentication required)
 
         // We connect to the SMTP server. I use SMTP GMAIL-third party server with TLS
         Properties properties = new Properties();

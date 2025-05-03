@@ -65,7 +65,7 @@ public class PostGreSQL {
     public static int checkToDataBase(String userName, String userPassword){ // function to login
         String DB_URL = "jdbc:postgresql://localhost:5432/javafx";
         String DB_USER = "postgres";
-        String DB_PASSWORD = "1k2k3k4k";
+        String DB_PASSWORD = "";
 
         String QUERY_VERIFY = "SELECT * FROM users WHERE username = ? and password= ?";
 
@@ -109,7 +109,7 @@ public class PostGreSQL {
     public static String getPassFromDataBase(String userName) { // function to get the password from a required username for forgot password
         String DB_URL = "jdbc:postgresql://localhost:5432/javafx";
         String DB_USER = "postgres";
-        String DB_PASSWORD = "1k2k3k4k";
+        String DB_PASSWORD = "";
 
         String QUERY_VERIFY = "SELECT password FROM users WHERE username = ?";
         String password = null;
@@ -138,7 +138,7 @@ public class PostGreSQL {
     public static int getIDforgotPass(String userName, String userPassword){ // get the ID for forgot password
         String DB_URL = "jdbc:postgresql://localhost:5432/javafx";
         String DB_USER = "postgres";
-        String DB_PASSWORD = "1k2k3k4k";
+        String DB_PASSWORD = "";
 
         String QUERY_VERIFY = "SELECT * FROM users WHERE username = ? and password= ?";
 
@@ -166,7 +166,7 @@ public class PostGreSQL {
     public static Map<Integer, String> getWorkoutNamesFromDatabase() { // get the workout and its id from the DB
         String DB_URL = "jdbc:postgresql://localhost:5432/javafx";
         String DB_USER = "postgres";
-        String DB_PASSWORD = "1k2k3k4k";
+        String DB_PASSWORD = "";
 
         String QUERY_GET_WORKOUT_INFO = "SELECT id, workoutname FROM typeofworkout";
 
@@ -197,7 +197,7 @@ public class PostGreSQL {
     public static Map<Integer, String> getExercisesFromDatabase(int workoutId) { // get the exercises of a specific workout (that's why we need the workoutID)
         String DB_URL = "jdbc:postgresql://localhost:5432/javafx";
         String DB_USER = "postgres";
-        String DB_PASSWORD = "1k2k3k4k";
+        String DB_PASSWORD = "";
 
         String QUERY_GET_EXERCISE_NAMES = "SELECT exercises.id, name FROM exercises JOIN typeofworkout ON exercises.workoutname_id = typeofworkout.id WHERE typeofworkout.id = ?";
 
@@ -228,7 +228,7 @@ public class PostGreSQL {
     public static void insertUserWorkout(Integer exerciseId, Integer nrSets, Integer nrReps, Integer userId, Integer kg, Integer date,Integer month) { // insert the workout of a user in DB
         String DB_URL = "jdbc:postgresql://localhost:5432/javafx";
         String DB_USER = "postgres";
-        String DB_PASSWORD = "1k2k3k4k";
+        String DB_PASSWORD = "";
 
         String QUERY_INSERT_USER_WORKOUT = "INSERT INTO userworkout(exercisename_id, sets, reps, user_id, kg, date, month) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
@@ -261,7 +261,7 @@ public class PostGreSQL {
 
         String DB_URL = "jdbc:postgresql://localhost:5432/javafx";
         String DB_USER = "postgres";
-        String DB_PASSWORD = "1k2k3k4k";
+        String DB_PASSWORD = "";
 
         String QUERY_GET_EXERCISE_NAMES = "SELECT name from exercises join userworkout on exercises.id=userworkout.exercisename_id where userworkout.date= ? AND userworkout.month= ? AND userworkout.user_id= ?";
 
@@ -296,7 +296,7 @@ public class PostGreSQL {
 
         String DB_URL = "jdbc:postgresql://localhost:5432/javafx";
         String DB_USER = "postgres";
-        String DB_PASSWORD = "1k2k3k4k";
+        String DB_PASSWORD = "";
 
         String QUERY_GET_EXERCISE_NAMES = "SELECT sets from exercises join userworkout on exercises.id=userworkout.exercisename_id where userworkout.date= ? AND userworkout.month= ? AND userworkout.user_id= ?";
 
@@ -331,7 +331,7 @@ public class PostGreSQL {
 
         String DB_URL = "jdbc:postgresql://localhost:5432/javafx";
         String DB_USER = "postgres";
-        String DB_PASSWORD = "1k2k3k4k";
+        String DB_PASSWORD = "";
 
         String QUERY_GET_EXERCISE_NAMES = "SELECT reps from exercises join userworkout on exercises.id=userworkout.exercisename_id where userworkout.date= ? AND userworkout.month= ? AND userworkout.user_id= ? ";
 
@@ -366,7 +366,7 @@ public class PostGreSQL {
 
         String DB_URL = "jdbc:postgresql://localhost:5432/javafx";
         String DB_USER = "postgres";
-        String DB_PASSWORD = "1k2k3k4k";
+        String DB_PASSWORD = "";
 
         String QUERY_GET_EXERCISE_NAMES = "SELECT kg from exercises join userworkout on exercises.id=userworkout.exercisename_id where userworkout.date= ? AND userworkout.month= ? AND userworkout.user_id= ?";
 
@@ -404,7 +404,7 @@ public class PostGreSQL {
 
         String DB_URL = "jdbc:postgresql://localhost:5432/javafx";
         String DB_USER = "postgres";
-        String DB_PASSWORD = "1k2k3k4k";
+        String DB_PASSWORD = "";
 
         String QUERY_GET_EXERCISE_NAMES = "SELECT workoutname FROM typeofworkout JOIN exercises ON typeofworkout.id = exercises.workoutname_id WHERE name = ?";
 
@@ -434,7 +434,7 @@ public class PostGreSQL {
 
         String DB_URL = "jdbc:postgresql://localhost:5432/javafx";
         String DB_USER = "postgres";
-        String DB_PASSWORD = "1k2k3k4k";
+        String DB_PASSWORD = "";
 
         String QUERY_GET_EXERCISE_NAMES = "SELECT kg FROM userworkout JOIN exercises ON  userworkout.exercisename_id=exercises.id where name= ? AND userworkout.user_id= ? ORDER BY kg DESC";
 
@@ -465,7 +465,7 @@ public class PostGreSQL {
 
         String DB_URL = "jdbc:postgresql://localhost:5432/javafx";
         String DB_USER = "postgres";
-        String DB_PASSWORD = "1k2k3k4k";
+        String DB_PASSWORD = "";
 
         String QUERY_GET_EXERCISE_NAMES = "SELECT username,id from users";
 
